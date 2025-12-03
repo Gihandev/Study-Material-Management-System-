@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Update npm dependencies (backend-focused)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Asia/Colombo"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "Gihandev"
+    assignees:
+      - "Gihandev"
+    # Optional: group updates for clarity
+    groups:
+      runtime-dependencies:
+        dependency-type: "production"
+
+  # Update GitHub Actions (if you add CI/CD or workflows later)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
